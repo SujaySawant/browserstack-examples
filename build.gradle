@@ -1,0 +1,27 @@
+group = 'org.browserstack'
+version = '1.0'
+description = 'browserstack-examples'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    test.java.srcDirs = ['src/test/java']
+    test.resources.srcDirs = ['src/test/resources']
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.1.0'
+    implementation 'org.testng:testng:7.4.0'
+}
+
+tasks.register('bstack-single', Test) {
+    useTestNG()
+    include '**/BrowserStackTest.class'
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+}
