@@ -10,5 +10,5 @@ steps:
   - name: test
     commands:
       - java -version
-      - ls
+      - env
       - gradlew bstack-single
