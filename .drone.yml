@@ -7,6 +7,7 @@ platform:
   arch: amd64
 
 steps:
-  - name: greeting
+  - name: test
+    image: maven:3-jdk-10
     commands:
       - ./gradlew bstack-single
