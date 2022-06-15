@@ -11,7 +11,6 @@ steps:
     commands:
       - java -version
       - export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/homebrew/Cellar/maven/3.8.1/bin
-      - export JAVA_HOME=/Users/sujaysawant/Library/Java/JavaVirtualMachines/liberica-1.8.0_302
       - export BROWSERSTACK_USERNAME=sujaysawant3
       - export BROWSERSTACK_ACCESS_KEY=9prpFDN9UBAMBhUeoes5
       - mvn -Dtest=BrowserStackTest test
