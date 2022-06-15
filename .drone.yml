@@ -11,6 +11,7 @@ steps:
     commands:
       - java -version
       - export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/b‌​in
+      - export JAVA_HOME=/Users/sujaysawant/Library/Java/JavaVirtualMachines/liberica-1.8.0_302
       - env
       - pwd
       - ls
