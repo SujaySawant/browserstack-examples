@@ -8,9 +8,9 @@ platform:
 
 steps:
   - name: test
-    failure: ignore
     commands:
       - java -version
+      - export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/b‌​in
       - env
       - pwd
       - ls
