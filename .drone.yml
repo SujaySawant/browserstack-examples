@@ -13,8 +13,9 @@ steps:
       - export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/b‌​in
       - export JAVA_HOME=/Users/sujaysawant/Library/Java/JavaVirtualMachines/liberica-1.8.0_302
       - export BROWSERSTACK_USERNAME=sujaysawant3
-        export BROWSERSTACK_ACCESS_KEY=9prpFDN9UBAMBhUeoes5
+      - export BROWSERSTACK_ACCESS_KEY=9prpFDN9UBAMBhUeoes5
       - env
       - pwd
       - ls
+      - mvn -version
       - ./gradlew bstack-single
