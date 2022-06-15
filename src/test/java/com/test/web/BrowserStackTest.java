@@ -36,7 +36,7 @@ public class BrowserStackTest {
         caps.setCapability("name", m.getName() + " - Chrome latest");
 
         caps.setCapability("os", "Windows");
-        caps.setCapability("os_version", "10");
+        caps.setCapability("os_version", "11");
         caps.setCapability("browser", "Chrome");
         caps.setCapability("browser_version", "latest");
 
