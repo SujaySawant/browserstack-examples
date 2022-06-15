@@ -8,7 +8,10 @@ platform:
 
 steps:
   - name: test
+    failure: ignore
     commands:
       - java -version
       - env
+      - pwd
+      - ls
       - ./gradlew bstack-single
