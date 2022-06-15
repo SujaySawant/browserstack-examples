@@ -8,9 +8,13 @@ platform:
 
 steps:
   - name: test
+    environment:
+      USERNAME:
+        from_secret: BROWSERSTACK_USERNAME
+      PASSWORD:
+        from_secret: BROWSERSTACK_ACCESS_KEY
     commands:
-      - java -version
       - export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/homebrew/Cellar/maven/3.8.1/bin
-      - export BROWSERSTACK_USERNAME=sujaysawant3
-      - export BROWSERSTACK_ACCESS_KEY=9prpFDN9UBAMBhUeoes5
+      - export BROWSERSTACK_USERNAME=$USERNAME
+      - export BROWSERSTACK_ACCESS_KEY=$PASSWORD
       - mvn -Dtest=BrowserStackTest test
