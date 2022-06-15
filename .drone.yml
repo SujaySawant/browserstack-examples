@@ -6,6 +6,10 @@ platform:
   os: darwin
   arch: amd64
 
+trigger:
+  event:
+    - push
+
 steps:
   - name: test
     environment:
