@@ -11,4 +11,4 @@ steps:
     commands:
       - java -version
       - env
-      - gradlew bstack-single
+      - ./gradlew bstack-single
