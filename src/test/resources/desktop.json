@@ -1,7 +1,6 @@
 {
   "commonCapabilities": {
     "project": "BrowserStack Drone CI",
-    "build": "Drone CI Build",
     "browserstack.debug": true,
     "browserstack.networkLogs": true
   },

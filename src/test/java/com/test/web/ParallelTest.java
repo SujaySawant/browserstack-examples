@@ -31,6 +31,8 @@ public class ParallelTest {
 
     private static final String USERNAME = System.getenv("BROWSERSTACK_USERNAME");
     private static final String ACCESS_KEY = System.getenv("BROWSERSTACK_ACCESS_KEY");
+    private static final String REPO_NAME = System.getenv("DRONE_REPO_NAME");
+    private static final String BUILD_NUMBER = System.getenv("DRONE_BUILD_NUMBER");
     private static final String HUB_URL = "https://hub-cloud.browserstack.com/wd/hub";
 
     @BeforeMethod(alwaysRun = true)
@@ -40,6 +42,7 @@ public class ParallelTest {
         Map<String, String> capabilitiesMap = new HashMap<>();
         capabilitiesMap.putAll(jsonPath.getMap("commonCapabilities"));
         capabilitiesMap.putAll(jsonPath.getMap("capabilities[" + capability + "]"));
+        capabilitiesMap.put("build", "drone-" + REPO_NAME + "-" + BUILD_NUMBER);
         if (capabilitiesMap.get("device") == null) {
             capabilitiesMap.put("name", m.getName() + " - " + capabilitiesMap.get("browser") + " " + capabilitiesMap.get("browser_version"));
         } else {
