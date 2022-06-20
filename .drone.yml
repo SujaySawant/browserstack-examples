@@ -18,3 +18,9 @@ steps:
       - export BROWSERSTACK_USERNAME=$USERNAME
       - export BROWSERSTACK_ACCESS_KEY=$PASSWORD
       - mvn -P parallel test
+
+trigger:
+  branch:
+    - main
+  event:
+    - push
