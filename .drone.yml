@@ -17,7 +17,7 @@ steps:
       - export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/homebrew/Cellar/maven/3.8.1/bin
       - export BROWSERSTACK_USERNAME=$USERNAME
       - export BROWSERSTACK_ACCESS_KEY=$PASSWORD
-      - mvn -P parallel test
+      - mvn -Dtest=BrowserStackTest test
 
 trigger:
   branch:
