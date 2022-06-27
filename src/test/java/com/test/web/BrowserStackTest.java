@@ -26,13 +26,15 @@ public class BrowserStackTest {
 
     private static final String USERNAME = System.getenv("BROWSERSTACK_USERNAME");
     private static final String ACCESS_KEY = System.getenv("BROWSERSTACK_ACCESS_KEY");
+    private static final String REPO_NAME = System.getenv("DRONE_REPO_NAME");
+    private static final String BUILD_NUMBER = System.getenv("DRONE_BUILD_NUMBER");
     private static final String HUB_URL = "https://hub-cloud.browserstack.com/wd/hub";
 
     @BeforeMethod(alwaysRun = true)
     public void setup(Method m) throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("project", "BrowserStack Drone CI");
-        caps.setCapability("build", "Drone CI Build");
+        caps.setCapability("build", "drone-" + REPO_NAME + "-" + BUILD_NUMBER);
         caps.setCapability("name", m.getName() + " - Chrome latest");
 
         caps.setCapability("os", "Windows");
