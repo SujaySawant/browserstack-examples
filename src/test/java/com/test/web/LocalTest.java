@@ -25,7 +25,7 @@ public class LocalTest {
     private WebDriver driver;
     private Local local;
 
-//    @BeforeSuite(alwaysRun = true)+
+//    @BeforeSuite(alwaysRun = true)
     public void setupLocal() throws Exception {
         local = new Local();
         Map<String, String> bsLocalArgs = new HashMap<>();
